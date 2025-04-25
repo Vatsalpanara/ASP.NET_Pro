@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="fineflix.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title>Welcome to fineflix</title>
+        <link rel="stylesheet" type="text/css" href="assets/style/style.css" />
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/06a651c8da.js" crossorigin="anonymous"></script>
+        <script src="assets/js/script.js"></script>
+    </head>
+
+       
+<body>
+    
+        <div>
+             <div class='wrapper'>
+            
+             <div class="topBar">
+
+                <div class="logoContainer">
+                    <a href="index.php">
+                        <img src="assets/images/logo.png" alt="Logo"/>
+                    </a>
+                </div>
+
+                <ul class="navLinks">
+                    <li><a href="index.aspx">Home</a></li>
+                    <li><a href="shows.aspx">TV Shows</a></li>
+                    <li><a href="movies.aspx">Movies</a></li>
+                </ul>
+
+                <div class="rightItems">
+                    <a href="search.php">
+                        <i class="fas fa-search"></i>
+                    </a>
+
+                    <a href="profile.aspx">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <asp:LinkButton ID="admin" runat="server" OnClick="admin_Click" Text="Admin" />
+
+                    <asp:LinkButton ID="logout" runat="server"><i class="fas fa-sign-out-alt"></i></asp:LinkButton>
+                                         
+                </div>
+
+            </div>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                  <div class='previewContainer'>
+
+                    <img src='E:\asp project\fineflix\entities\thumbnails\7.Kesari.jpg' class='previewImage' hidden />
+
+                    <video autoplay muted class='previewVideo' onended='previewEnded()'>
+                        <source src='entities/previews/7_Kesari.mp4' type='video/mp4' />
+                    </video>
+
+                    <div class='previewOverlay'>
+                        
+                        <div class='mainDetails'>
+                            <h3>Kesari</h3>
+                            Kesari
+                            <div class='buttons'>
+                                <button onclick='watchVideo($videoId)'><i class='fas fa-play'></i> playButtonText</button>
+                                <button onclick='volumeToggle(this)'><i class='fas fa-volume-mute'></i></button>
+                            </div>
+
+                        </div>
+
+                    </div>
+        
+                </div>
+                </div>
+
+            
+        </div>
+    </form>
+</body>
+</html>
+
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
